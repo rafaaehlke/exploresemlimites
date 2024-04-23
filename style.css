@@ -1,0 +1,270 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  background-color: var(--bgcolor);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#app {
+  display: grid;
+  
+}
+
+:root {
+  font-size: 62.5%;
+  --color--white: #fff;
+  --bgcolor: #f9f4fb;
+  --text--primary-color: #312d64;
+  --text--secondary-color: #b52184;
+  --bg-linear: linear-gradient(96deg, #343193 0%, #302c63 99.68%);
+}
+
+/* Header */
+#logo {
+  width: 100%;
+}
+
+.headertext {
+  text-align: center;
+}
+
+.headertext h1 {
+  color: var(--text--secondary-color);
+  font-size: 3.2rem;
+  font-weight: 900;
+
+  margin-bottom: 0.5rem;
+}
+
+.headertext p {
+  color: var(--text--primary-color);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.button-down {
+  margin: 3.5rem 0 9.3rem;
+}
+
+/* Cards */
+
+.container,
+.col3 {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  background: var(--bg-linear);
+  padding: 5.2rem 3.9rem;
+}
+
+.card {
+  background-color: var(--color--white);
+  border-radius: 2rem;
+  padding: 2.65rem 2.65rem;
+}
+
+.card h2 {
+  color: var(--text--secondary-color);
+  font-size: 2.9rem;
+  line-height: 3.7rem;
+  font-weight: 900;
+
+  margin: 3.3rem 0 2rem;
+}
+
+.card p {
+  color: var(--text--primary-color);
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: bold;
+}
+
+/* 3º Parte */
+.col3 {
+  background: var(--bgcolor);
+  
+  
+}
+.col3 h3 {
+  color: var(--text--secondary-color);
+  font-size: 3.2rem;
+  font-weight: 900;
+  line-height: 4rem;
+
+  margin-bottom: 4.2rem;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.input-wrapper 
+input, 
+textarea {
+  width: 34.8rem;
+  padding: 1.2rem 1.6rem 1.2rem 1.4rem;
+  
+  border-radius: 1.6rem;
+  border: 1.5px solid var(--text--primary-color);
+  color: red;
+  font-weight: 600;
+
+  background-color: var(--bgcolor);
+
+
+}
+
+.input-wrapper input {
+  padding-left: 4.8rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-wrapper textarea {
+  width: 100%;
+  height: 9.8rem;
+
+}
+
+.input-wrapper input:focus {
+  outline: 1px solid var(--bg-linear);
+}
+
+.input-wrapper 
+textarea:focus {
+  outline: 1px solid var(--bg-linear);
+}
+.input-wrapper
+input::placeholder,
+textarea{
+  color: var(--text--primary-color);
+}
+
+#nome {
+  background: url(./assets/iconPerson.svg) no-repeat scroll 1.2rem .9rem;
+}
+
+#email {
+  background: url(./assets/iconSocial.svg) no-repeat scroll 1.2rem .9rem;
+}
+
+#btn-envio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 15rem;
+  height: 4.5rem;
+
+  background: var(--bg-linear);
+  color: #fff;
+
+  border: none;
+  border-radius: 1.6rem;
+
+  margin-top: 2.4rem;
+  
+}
+
+#stars {
+  display: none;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 7.8rem;
+  background: var(--bg-linear);
+  
+}
+
+footer p {
+  color: var(--color--white);
+  font-size: 1.9rem;
+  line-height: 2.4rem;
+  text-align: center;
+  
+  padding: 1.6rem 1.6rem;
+}
+
+/* Media Queries */
+
+@media (min-width: 700px) {
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 10%;
+    grid-template-rows: 30% 1fr 20%;
+    
+    overflow: hidden;
+  }
+
+  header {
+    display: grid;
+    grid-column: 1/6;
+    grid-template-rows: 1/2;
+  }
+
+  #logo {
+    max-width: 72rem;
+    grid-column: 6/6;
+  }
+
+  main {
+    display: grid;
+    grid-column: 1/6;
+  }
+
+  
+  .card {
+    display: grid;
+    grid-column: 1/4;
+    width: 36.4rem;
+    align-self: flex-start;
+    
+    
+  }
+  
+  .col3 {
+    display: grid;
+    grid-column: 1/4;
+  }
+  
+  form {
+    /* padding: 9.5rem auto 9.5rem 10.9rem; */
+    margin-top: 9.5rem;
+    margin-bottom: 9.5rem;
+    margin-left: 10.9rem;
+  }
+  
+  form,
+  .input-wrapper input {
+    width: 59.5rem;
+  }
+  
+  #stars {
+    display: grid;
+    grid-column: 4/6;
+    object-fit: cover;
+    /* width: 64.4rem; */
+  }
+
+  footer {
+    display: grid;
+    grid-column: 1/6;
+  }
+}
