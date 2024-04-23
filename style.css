@@ -118,7 +118,7 @@ textarea {
   
   border-radius: 1.6rem;
   border: 1.5px solid var(--text--primary-color);
-  color: red;
+  color: var(--text--primary-color);
   font-weight: 600;
 
   background-color: var(--bgcolor);
