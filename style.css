@@ -14,11 +14,6 @@ html {
   scroll-behavior: smooth;
 }
 
-#app {
-  display: grid;
-  
-}
-
 :root {
   font-size: 62.5%;
   --color--white: #fff;
@@ -29,15 +24,18 @@ html {
 }
 
 /* Header */
-#logo {
+.astronaut img {
   width: 100%;
+  display: block;
+
+  margin-bottom: 1.7rem;
 }
 
-.headertext {
+.hero-text {
   text-align: center;
 }
 
-.headertext h1 {
+.hero-text h1 {
   color: var(--text--secondary-color);
   font-size: 3.2rem;
   font-weight: 900;
@@ -45,14 +43,14 @@ html {
   margin-bottom: 0.5rem;
 }
 
-.headertext p {
+.hero-text p {
   color: var(--text--primary-color);
   font-size: 2rem;
   font-weight: bold;
 }
 
-.button-down {
-  margin: 3.5rem 0 9.3rem;
+.button-down img {
+  margin: 4.1rem auto 9.3rem;
 }
 
 /* Cards */
@@ -88,11 +86,22 @@ html {
   font-weight: bold;
 }
 
+/* Animação card */
+
+.card img {
+  animation: luaAnimation 3000ms infinite linear 560ms;
+}
+
+@keyframes luaAnimation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
 /* 3º Parte */
 .col3 {
   background: var(--bgcolor);
-  
-  
 }
 .col3 h3 {
   color: var(--text--secondary-color);
@@ -110,20 +119,17 @@ fieldset {
   gap: 2.4rem;
 }
 
-.input-wrapper 
-input, 
+.input-wrapper input,
 textarea {
   width: 34.8rem;
   padding: 1.2rem 1.6rem 1.2rem 1.4rem;
-  
+
   border-radius: 1.6rem;
   border: 1.5px solid var(--text--primary-color);
   color: var(--text--primary-color);
   font-weight: 600;
 
   background-color: var(--bgcolor);
-
-
 }
 
 .input-wrapper input {
@@ -135,36 +141,35 @@ textarea {
 .input-wrapper textarea {
   width: 100%;
   height: 9.8rem;
-
 }
 
 .input-wrapper input:focus {
   outline: 1px solid var(--bg-linear);
 }
 
-.input-wrapper 
-textarea:focus {
+.input-wrapper textarea:focus {
   outline: 1px solid var(--bg-linear);
 }
-.input-wrapper
+
+.input-wrapper 
 input::placeholder,
-textarea{
+textarea::placeholder {
   color: var(--text--primary-color);
 }
 
 #nome {
-  background: url(./assets/iconPerson.svg) no-repeat scroll 1.2rem .9rem;
+  background: url(./assets/iconPerson.svg) no-repeat scroll 1.2rem 0.9rem;
 }
 
 #email {
-  background: url(./assets/iconSocial.svg) no-repeat scroll 1.2rem .9rem;
+  background: url(./assets/iconSocial.svg) no-repeat scroll 1.2rem 0.9rem;
 }
 
 #btn-envio {
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   width: 15rem;
   height: 4.5rem;
 
@@ -175,7 +180,6 @@ textarea{
   border-radius: 1.6rem;
 
   margin-top: 2.4rem;
-  
 }
 
 #stars {
@@ -190,7 +194,6 @@ footer {
   width: 100%;
   height: 7.8rem;
   background: var(--bg-linear);
-  
 }
 
 footer p {
@@ -198,73 +201,150 @@ footer p {
   font-size: 1.9rem;
   line-height: 2.4rem;
   text-align: center;
-  
+
   padding: 1.6rem 1.6rem;
 }
 
 /* Media Queries */
 
-@media (min-width: 700px) {
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 10%;
-    grid-template-rows: 30% 1fr 20%;
-    
-    overflow: hidden;
+@media (min-width: 1024px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+
+    gap: 6rem;
+    justify-content: center;
   }
 
-  header {
-    display: grid;
-    grid-column: 1/6;
-    grid-template-rows: 1/2;
-  }
-
-  #logo {
-    max-width: 72rem;
-    grid-column: 6/6;
-  }
-
-  main {
-    display: grid;
-    grid-column: 1/6;
-  }
-
-  
-  .card {
-    display: grid;
-    grid-column: 1/4;
-    width: 36.4rem;
-    align-self: flex-start;
-    
-    
-  }
-  
   .col3 {
-    display: grid;
-    grid-column: 1/4;
-  }
-  
-  form {
-    /* padding: 9.5rem auto 9.5rem 10.9rem; */
-    margin-top: 9.5rem;
-    margin-bottom: 9.5rem;
+    display: flex;
+
+    gap: 9.2rem;
+    width: 148rem;
+    height: 61.2rem;
     margin-left: 10.9rem;
   }
-  
-  form,
-  .input-wrapper input {
-    width: 59.5rem;
-  }
-  
-  #stars {
-    display: grid;
-    grid-column: 4/6;
-    object-fit: cover;
-    /* width: 64.4rem; */
+
+  .input-wrapper {
+    width: 56.2rem;
   }
 
-  footer {
-    display: grid;
-    grid-column: 1/6;
+  .col3 .input-wrapper input,
+  textarea {
+    width: 56.2rem;
+  }
+}
+
+
+@media (min-width: 1440px) {
+  #hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2.9rem 10.4rem 10.8rem;
+  }
+
+  #hero .astronaut {
+    order: 2;
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    order: 1;
+    margin-top: 25rem;
+  }
+
+  .hero-text p {
+    font-size: 3.2rem;
+    line-height: 2.3rem;
+  }
+
+  .hero-text h1 {
+    font-size: 6rem;
+    line-height: 7.4rem;
+
+    margin-bottom: 0.8rem;
+  }
+
+  #hero .hero-text h1,
+  p {
+    margin-right: 2.4rem;
+    margin-left: 10.8rem;
+  }
+
+  .button-down {
+    margin-left: 10.8rem;
+    padding-top: 17.8rem;
+  }
+
+  /* Button animation */
+
+  #hero .hero-text a:hover {
+   transform: scale(1.1);
+  }
+
+  /* cards */
+
+  main {
+    min-width: 144rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+
+    gap: 6rem;
+    justify-content: center;
+  }
+
+  .card {
+    width: 36.6rem;
+  }
+
+  .card h2,
+  figcaption p {
+    width: 32rem;
+    margin: 3.2rem;
+    margin-left: 0;
+  }
+
+  /* transição */
+
+  .card img {
+    animation: luaAnimation 1695ms infinite linear 560ms;
+  }
+
+  @keyframes luaAnimation {
+    to {
+      transform: rotate(360deg) translate(0px, 0px);
+    }
+  }
+
+  .card img:hover {
+    animation-play-state: paused;
+  }
+
+  figcaption p {
+    width: 32.1rem;
+    margin-top: 2.4rem;
+  }
+
+  /* Formulário */
+
+  .col3 {
+    display: flex;
+    gap: 9.2rem;
+    width: 144rem;
+    height: 61.2rem;
+    margin-left: 10.9rem;
+  }
+
+  .input-wrapper {
+    width: 56.2rem;
+  }
+
+  .col3 .input-wrapper input {
+    width: 56.2rem;
   }
 }

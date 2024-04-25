@@ -14,29 +14,22 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="app">
-      <header>
-        <img
-          id="logo"
-          src="./assets/astronautaa_desktop.png"
-          alt="Cartoon de um astronauta com fundo dos plantas"
-        />
-        <div class="headertext">
-          <h1>Explore sem limites</h1>
-          <p>Porque o aprendizado é contínuo</p>
+    <section id="hero">
+      <div class="astronaut">
+        <img src="./assets/astronautaa_desktop.png" alt="" />
+      </div>
 
-          <a href="#form">
-            <img
-              class="button-down"
-              src="./assets/swipe.svg"
-              alt="seta apontando para baixo, na cor roxa, Deslize para baixo"
-            />
-          </a>
-        </div>
-      </header>
+      <div class="hero-text">
+        <h1>Explore sem limites</h1>
+        <p>Porque o aprendizado é contínuo</p>
+        <a href="#form" class="button-down">
+          <img src="./assets/swipe.svg" alt="" />
+        </a>
+      </div>
+    </section>
 
-      <main>
-        <div class="container">
+    <main>
+      <div class="container">
         <section class="card">
           <figure class="imagem1">
             <img
@@ -88,43 +81,42 @@
           </figcaption>
         </section>
       </div>
-      </main>
+    </main>
 
-      <div class="col3">
-        <form action="form">
-          <h3>Entre em contato</h3>
-          <fieldset>
-            <div class="input-wrapper">
-              <input
-                type="text"
-                name="nome"
-                id="nome"
-                placeholder="Digite seu nome"
-              />
-            </div>
+    
+    <div class="col3">
+      <form id="form">
+        <h3>Entre em contato</h3>
+        <fieldset>
+          <div class="input-wrapper">
+            <input
+              type="text"
+              name="nome"
+              id="nome"
+              placeholder="Digite seu nome"
+            />
+          </div>
 
-            <div class="input-wrapper">
-              <input type="email" name="email" id="email" placeholder="Email" />
-            </div>
+          <div class="input-wrapper">
+            <input type="email" name="email" id="email" placeholder="Email" />
+          </div>
 
-            <div class="input-wrapper">
-              <textarea name="mensagem" id="">
-Digite sua mensagem aqui...</textarea
-              >
-            </div>
-          </fieldset>
+          <div class="input-wrapper">
+            <textarea
+              name="mensagem"
+              id=""
+              placeholder="Digite sua mensagem aqui..."
+            ></textarea>
+          </div>
+        </fieldset>
 
-          <button id="btn-envio">Enviar Mensagem</button>
-        </form>
-        
-        <img id="stars" src="./assets/stars1.png" alt="estrelas roxa" />
-        
-      </div>
+        <button hreff="#" id="btn-envio">Enviar Mensagem</button>
+      </form>
 
-
-      <footer>
-        <p>© 2024 - Rocketseat Explorer</p>
-      </footer>
     </div>
+
+    <footer>
+      <p>© 2024 - Rocketseat Explorer</p>
+    </footer>
   </body>
 </html>
